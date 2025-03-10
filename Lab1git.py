@@ -1,8 +1,7 @@
 def caesar_cipher(text, shift, mode):
     result = ""
     if mode == "d":
-        shift = -shift  # Reverse shift for decryption
-
+        shift = -shift  
     for char in text:
         if char.isalpha():
             base = ord('A') if char.isupper() else ord('a')
@@ -13,7 +12,7 @@ def caesar_cipher(text, shift, mode):
     return result
 
 
-# Ask user whether to encrypt or decrypt
+
 mode = input("Do you want to encrypt or decrypt? (enter 'e' or 'd'): ").strip().lower()
 
 if mode not in ["e", "d"]:
