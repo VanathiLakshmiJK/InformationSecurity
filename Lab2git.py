@@ -1,4 +1,4 @@
-# Ex 2 - Implementation Of Integrity
+
 
 import hashlib
 
@@ -15,13 +15,12 @@ def generate_hash(text, algorithm):
     else:
         return "Invalid algorithm selected."
 
-    return hash_obj.hexdigest()  # Return the hexadecimal digest
+    return hash_obj.hexdigest()  
 
-# Get user input
+
 text = input("Enter the text to hash: ")
 print("Select hashing algorithm: md5, sha1, sha256, sha512")
 algorithm = input("Enter the algorithm: ").strip().lower()
 
-# Generate and display the hash
 hashed_text = generate_hash(text, algorithm)
 print(f"Hashed Output ({algorithm}): {hashed_text}")
